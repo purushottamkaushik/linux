@@ -1,0 +1,185 @@
+
+
+grep ==> Text search in filename
+
+grep -R "text" filename
+
+grep -n "text" filename  
+
+grep -iR "text" directoryName 
+
+grep -cR "text" directoryName 
+
+grep -oR "text" directoryName # Output will be specific 
+
+grep -w "text" filename
+
+grep -c "text" filename
+
+grep -3w "text" filename # Before and after 3 lines
+
+
+grep nice filename
+
+grep -R nice directoryName
+
+grep -i nice filename 
+
+grep -n nice filename
+
+grep -o nice filename
+
+
+=======================
+
+
+Compare and diff commands
+
+cmp menu1.txt menu2.txt
+
+
+=======
+
+
+diff command
+
+it is used to compare two files and displays all the mismatches in the files
+
+In addition it displays special sysmbol whatwe should do to make these files identical
+
+a = add 
+c = change
+d = delete
+
+> indicates right-side of the file 
+
+1a 
+
+< indicate left side file
+
+
+Demopurushottam@ubuntuDevops:~/practice/shell-commands/diff$ 
+purushottam@ubuntuDevops:~/practice/shell-commands/diff$ ll
+total 16
+drwxrwxr-x 2 purushottam purushottam 4096 Jan 24 14:13 ./
+drwxrwxr-x 4 purushottam purushottam 4096 Jan 24 14:12 ../
+-rw-rw-r-- 1 purushottam purushottam   43 Jan 24 14:13 stations1.txt
+-rw-rw-r-- 1 purushottam purushottam   27 Jan 24 14:14 stations2.txt
+purushottam@ubuntuDevops:~/practice/shell-commands/diff$ cat stations1.txt 
+Pune
+Mumbai
+Delhi
+Hyderabad
+Chennai
+Sonipatpurushottam@ubuntuDevops:~/practice/shell-commands/diff$ cat stations2.txt 
+Mumbai
+Delhi
+Hyderabad
+Demopurushottam@ubuntuDevops:~/practice/shell-commands/diff$ diff stations1.txt stations2.txt 
+1d0
+< Pune
+5,6c4
+< Chennai
+< Sonipat
+\ No newline at end of file
+---
+> Demo
+\ No newline at end of file
+purushottam@ubuntuDevops:~/practice/shell-commands/diff$
+
+
+====================
+
+
+0a1 0th line of the first file should be added with 1st of right side  file 
+
+=====================================
+
+Pipes and Redirections 
+
+Pipe (|) is used to joining two linux shell commands and execute together 
+
+command1 | command2 
+
+
+redirection ( < And  > ) 
+
+Its is used for writing or redirecting the output to another destination or take input from a different location
+
+< , > symbols are used for redirection the output or taking the input
+
+command  > destination (only destination not command allowed) 
+
+
+file1.txt
+This is devops
+Linux is prerequistics for Devops
+
+
+cat file1.txt | wc -l # Piping operation 
+
+ls -l | wc -l 
+
+who | wc -l 
+
+ps -ef # Full Process List 
+
+
+ps -ef | wc -l # TO list all processes 
+
+ps -ef | grep "firefox"
+
+ps ==> Show processes
+
+-e for everyone
+-f full listing
+
+How many number of processes are running by sriman
+
+
+cat Hello.txt | grep -wo "Demo" | wc -l
+
+
+=======================================================================
+
+
+
+ 
+
+
+
+
+
+	 
+	 
+	 
+	 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
