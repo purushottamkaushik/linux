@@ -1,0 +1,53 @@
+
+==========================
+
+VI (VIM) commands
+
+VI has 3 Modes
+	1. Command Mode
+		IN commnad mode we cannot edit / input the text
+		in the text editor. Here any keypress will be taken as a command and will perform a relevant operation
+		
+		Need to press ESC key to enter into command mode.
+		
+		By default the editor will be opened into command mode
+			Press escape to enter into command mode 
+		
+	2. Input Mode
+		Any keypress will be taken as an input and writes into the file.
+		To enter into input mode you should press I character 
+	
+	
+	3. Exit Mode 
+		In this we are going to quit fromthe editor
+		First we shoulf be back to command mode by using [ESC] and should typw :q[quit]
+
+
+
+sudo apt-get update
+
+sudo apt-get install vim
+
+
+What are the commands we can use in VI in command mode ?
+
+A = Append the contents to the end of the line.
+a = appends the content from the current cursor position  
+i = insert the content from the beginning of the line.
+I = insert contents from the current cursor position
+R = Replace characters from current cursor positiion 
+r = replace single character 
+
+S = replace the current line.
+
+yy == yank (copy the line)
+2yy = copy 2 lines
+p = paste 
+
+
+x=delete a character 
+dw = delete a word
+dd = delete a line
+2dd = delete 2 lines
+
+

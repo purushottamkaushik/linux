@@ -188,3 +188,141 @@ ll
 nano .bashrc 
 source .bashrc
 exit
+ll
+cd 
+ll
+cd stories
+mkdir stories
+cd stories/
+ll
+mkdir infants
+mkdir olds
+mkdir youth
+cd infants/
+ll
+touch demo.txt
+nano demo.txt 
+nano demo1.txt
+cd 
+ll
+grep "Morning" .
+grep "Morning" 
+grep "Morning" stories/infants/demo.txt 
+grep "Morning " stories/infants/demo.txt 
+grep "Morning" stories/infants/demo.txt 
+grep "Morning" stories/infants/demo1.txt 
+ll
+cat .bashrc
+echo $HISTSIZE
+nano .bashrc 
+cd stories/
+ll
+nano hello.txt
+grep "Demo" hello.txt 
+grep "Demo " hello.txt 
+cat hello.txt 
+pwd
+cd 
+ll
+grep "Demo" stories/
+grep "Demo" -D stories/
+tree stories/
+grep -R "do" stories/
+grep -R "do" stories/hello.txt 
+grep -R "do" stories/infants/demo.txt 
+grep -R "do" stories/infants/demo1.txt 
+grep -R "Demo" stories/infants/demo1.txt 
+grep -R "Demo" stories/
+grep -R "Demo" stories/ # Find files having word do inside a directory
+ll
+history
+cp .bash_history Desktop/notes/
+ll
+cd Downloads/
+ll
+stats a.jpeg 
+sudo apt install stat
+sudo apt update
+sudo apt clean
+cd /var/
+ll
+cd cache/
+ll
+cd apt/
+ll
+cd archives/
+ll
+cd /home/purushottam/Desktop/notes/
+ll
+nano linuxnotes
+cd 
+ll
+grep -n "Demo" stories/infants/demo.txt 
+grep -n "Demo" stories/infants/demo1.txt 
+grep -n "Demo" stories/
+grep -n -R  "Demo" stories/
+grep -n -R  "Demo" stories/ # Display line numbers also
+ll
+grep -n -R Demo stories
+grep -n -R Anup stories
+grep -n -R anup stories
+grep -n -R -i anup stories
+grep -n -R -i anup stories # -i for ignoreCase
+grep -ioR anup stories/ 
+grep -on anup stories/hello.txt 
+grep -oin anup stories/hello.txt 
+grep -w anup stories/hello.txt 
+grep -w Anup stories/hello.txt 
+grep -c Anup stories/hello.txt  # Number of words
+grep -c Anup stories/hello.txt  # Number of words count
+grep -3w Anup stories/hello.txt  # Number of words
+grep -3w Anup stories/hello.txt  # before and after 3 linessss
+grep -digit nup stories/hello.txt 
+grep --digit nup stories/hello.txt 
+grep digit nup stories/hello.txt 
+ll
+mkdir practice
+cd practice/
+ll
+nano menu1.txt
+nano menu2.txt
+cmp menu1.txt menu2.txt 
+ll
+mkdir shell-commands
+mv menu* shell-commands/
+ll
+cd shell-commands/
+ll
+mkdir cmp
+ll
+mv menu* cmp/
+ll
+cd cmp/
+ll
+cmp menu1.txt menu2.txt 
+cat menu1.txt 
+cat menu2.txt 
+cd ..
+ll
+mkdir diff
+cd diff/
+ll
+cat stations1.txt
+cat >  stations1.txt
+cd .ssh/
+ssh root@192.168.0.26
+ssh root@revpl.radiaantexpovision.in -p 7031
+cd 
+ll
+cd practice/
+ll
+cd shell-commands/
+ll
+cd diff/
+ll
+cat stations1.txt 
+cat >  stations2.txt 
+ll
+cat stations1.txt 
+cat stations2.txt 
+diff stations1.txt stations2.txt 

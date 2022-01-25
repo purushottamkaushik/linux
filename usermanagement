@@ -1,0 +1,27 @@
+User Management :
+	Linux is a multi-user operating system, multiple users can login and access the system resources at tthe same time.
+	
+	
+	In linux we have two type of the users :
+		1. ROOT user
+		2. Normal User
+	
+	ROOT User : There can be only one root user of a linux install . He has control of the entire system resources
+		1.1 Create other users.
+		1.2 MOdify other users.
+		can manaaged any files onthe device
+		can manage process
+		User management
+		File Management
+		Network COnfigurations
+		System Configurations
+		
+		
+	*****************	NEVER loose the root user of the linux if so you lost the access to the system 
+		
+		
+	2. Normal User : Other than the one ROOT user any user we add into  linux system becomes the normal user
+	 	the normal user can only see his/her files under the user home directory but cannot have access to any system resources
+	 			
+		Any user added by the root user is known as Normal User.
+	

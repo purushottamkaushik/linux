@@ -1,0 +1,87 @@
+File packaging and compression
+
+packaging == we can package multiple files of a directory into one single file by using packaging. Packaging doesnt compress the contents file/folder.
+
+ The only purpose of packaging is to make one single file so that it can be easily distributed 
+
+
+Linux has provided one utiility called "tar" stands for tarball.
+
+tar -cvf books.tar books
+
+-c = create
+-v = verbose 
+-f = filename
+
+always the tar file has the extension ".tar" 
+
+how to untar the files ? 
+tar -xvf books.tar
+
+-x = extract 
+-v = verbose
+-f = input filename
+
+tar -xvf books.tar -C directory ==> untar the file into specified directory.
+
+-C for specifying the directory
+
+
+====================================================================================
+
+
+packaging = tar -cvf target.tar sourcedirectory
+
+unpack = tar -xvf target.tar 
+
+unpack to a diffrenetn directory = tar -xvf  target.tar -C directory
+
+compression = The group of files of a folder cannot be compressed directly unless those are packaged into a single tar file ..
+
+Linux has provided a software utility "gzip and gunzip"
+
+gzip == compression ( size is reduced and easily transfer it easily over the network)
+ 
+gunzip ==> uncompression (size is expanded) 
+
+==========================================================================
+
+
+target.tar  ==> gzip target.tar ==> It created the target.tar.gz with the zipped contents in the same directory,now here you wont find .tar file 
+".gz" ==> indicated its an linux zip extension
+
+gunzip target.tar.gz ===> this will unzip the .gz into .tar back
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

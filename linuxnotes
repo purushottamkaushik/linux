@@ -1,5 +1,3 @@
-
-
 grep ==> Text search in filename
 
 grep -R "text" filename
@@ -141,6 +139,31 @@ cat Hello.txt | grep -wo "Demo" | wc -l
 
 
 =======================================================================
+
+ls -l | grep -iw "JAN 24" # To check files created on JAN 24
+
+
+pipes : used for joining two commands. The output of the first command will be passed as the input of the second command
+and will execute. In this way we can join any no of commands and would get executred from left to right
+
+redirections : are used to redirecting the standard input oor output of a command
+
+There are 2 type of redirections are there .
+1. <= input redirection
+2. > output redirection
+
+Usually a command writes the output onto the standard cosnile if you want to write the outpit of a command to a differrent desitnation 
+
+Similarly a command task the input from standard input , but if you want to pass any other source as an input than standard input , then use input redirection "<"
+
+note:- redirections cannot be used between 2 commands.
+
+
+
+=======================
+
+Nano file editor
+
 
 
 
