@@ -17,11 +17,311 @@ User Management :
 		System Configurations
 		
 		
-	*****************	NEVER loose the root user of the linux if so you lost the access to the system 
+	*****************NEVER loose the root user of the linux if so you lost the access to the system 
 		
 		
 	2. Normal User : Other than the one ROOT user any user we add into  linux system becomes the normal user
 	 	the normal user can only see his/her files under the user home directory but cannot have access to any system resources
 	 			
 		Any user added by the root user is known as Normal User.
+		
+	Groups : User in linux can't be managed individually as it takes lot of time in tracking which user has access to what and issuing permission individually also take lot of time.
 	
+	 That is why linux comes with groups. We can create groups and can associate users to groups so that collectively we can manage those group of users by granting permissions/revoking to the group.
+	 
+	 
+	 
+	What are the basic attributes of a user ? 
+		 
+	 JOE 
+	    - file 	== associate this file to that user internally 
+	    For eery resource in lniux it is assocated with the user who created it.
+	    
+	    File
+	    	Attributes 
+	    	   Owner ==> JOE
+	    	   
+	** Every user we create in linux is identified by Uid of the user
+		10 Files 
+			-Attributes 
+			Owner - 1001
+		
+		
+It means every users we have attributes like : 
+	1. username
+	2. uid
+	3. password
+	4. groupId (For every group also we have gid(GroupId) through which a group is identifued)
+	
+/directory = permission to group 1011
+
+
+
+============================================================
+How to add a user into linux system ?
+The user is added to the linux system by creating a USER ACCOUNT .
+*** While adding a user linux will create a uid for the user based on the sequence increment from last uid (currentUID = previous UId  + 1 ). (Automatically)
+
+JOE ==USERNAME
+
+JOE_GROUP 
+
+2 Every user must and should associate to a group in linux , so when we add a user linux will automatically create a group with the usersname and associate the user to this group .
+
+3. For every user account being added to default username directory will be created and associated for that users
+
+4. and stores all the information about the user in a file called /etc/passwd
+==========================================================================================
+
+
+How to see how many users are there in the linux system ?
+
+cat /etc/passwd 
+
+Command to add user ==> useradd username
+
+			 useradd -u uid -g gid -d /home/directory -s shell 
+			 
+
+sudo su - = will switch the user into root prompt. 
+By default the terminal will not be opened with root priviledges to prottected accidental damage to the system resources. 
+
+useradd username ==> By default it will create a user which has password (Empty) ===========> Standard bash command 
+***** Before performing the useradd you must enter using root user access using command (sudo su -)
+
+
+useradd ==> Standard bash command
+======================================================================================================
+
+Add user to system
+
+adduser username
+
+
+
+
+root@ubuntuDevops:/home/joe# id
+uid=0(root) gid=0(root) groups=0(root)
+
+adduser joe
+
+root@ubuntuDevops:/home/joe# id joe
+uid=1001(joe) gid=1001(joe) groups=1001(joe)
+root@ubuntuDevops:/home/joe#
+
+
+======================================================================
+How to switch the user ? 
+
+SUDO ==> Switch user DO
+su ==> Switch user 
+
+sudo su username
+	sudo su joe
+	sudo su anup
+	
+FOr all commands in /sbin directory can be accessed in super user of the linux system only. 
+By default terminal logs in user in normal mode. In order to execute any of the /sbin commmands we need to switch as root.
+
+Instead of switching everytime we can use sudo (DO It as superuser) and will not switch the current user.
+
+Root user can only switch the user..
+
+	
+sbin commands (These commands can be executed by super user of the linux system)
+	adduser
+	groupadd
+	su 
+	userdel
+	chown 
+	chgrp
+	systemctl 
+	
+	
+When we open linux terminal by default it asks for username/password and login as a normal user into the prompt [ even we supply super user credentials for protection/safety]
+	
+As there are multiple user in the linux system we can swithc from one to another user without restarting.
+This will logout the current user and login with the new user.
+
+Syntax :-> su user ,but su is a /sbin command and can be run by super user only. so inorder to run as superuser priviledge we have two options 
+	1. Switch as root
+	2. sudo command
+	
+SUDO Stands for super user do. ==> EXCEUTE THE COMMAND WIITH ROOT USER PRIVELEDGES
+THEN after successful authentication as root user you will be switched to joe>
+
+note : SUDO CANNOt be used by all users.
+
+===============================================
+
+ROOT = ONLY one user as a root can manaage linux system ?
+
+
+sudoers ==> 
+	We can nominate few normal users as sudoers without compromising the security.
+	
+	
+Sudoers can do only this: software installations, process management , resource management.
+
+How to promote Normal User as sudoers?
+ /etc/sudoers in this you can add normal users to add as sudoers 
+ 
+There are 2 ways to do this
+	sudoers  
+ 		username
+ 			joe
+ 			demo	
+ 
+ 		group
+ 			hr 
+ 		
+ 
+1. add joe to sudoers file 
+2. assign joe to sudoers group
+
+
+sudo su - or sudo su root
+
+==============================================
+
+How to add groups ?
+
+groupadd groupName
+
+groupadd -gid 1002 groupName
+
+Want to see a user in which groups ?
+
+groups username ==> shows a user is in which groups
+
+I want to see the details of a user ? (id username) =shows the information of a user
+
+passwd = is to reset the current system password of the user after login.
+
+groupdel groupName ==> To delete a group 
+==============================================
+
+How to modify a user ? 
+
+adduser rock
+
+usermod -aG sudoers rock # add user rock to sudoers group
+============================================
+
+userdel 
+
+
+
+=============================================
+
+Practical 
+
+
+
+root@ubuntuDevops:~# adduser -uid 2001 rock --home /home/rocky
+adduser: The user `rock' already exists.
+root@ubuntuDevops:~# userdel rock
+root@ubuntuDevops:~# adduser -uid 2001 rock --home /home/rocky
+Adding user `rock' ...
+Adding new group `rock' (2001) ...
+Adding new user `rock' (2001) with group `rock' ...
+Creating home directory `/home/rocky' ...
+Copying files from `/etc/skel' ...
+New password: 
+Retype new password: 
+passwd: password updated successfully
+Changing the user information for rock
+Enter the new value, or press ENTER for the default
+	Full Name []: 
+	Room Number []: 
+	Work Phone []: 
+	Home Phone []: 
+	Other []: 
+Is the information correct? [Y/n] y
+root@ubuntuDevops:~# userid rock
+
+Command 'userid' not found, did you mean:
+
+  command 'uservd' from deb userv (1.2.0)
+
+Try: apt install <deb name>
+
+root@ubuntuDevops:~# id rock
+uid=2001(rock) gid=2001(rock) groups=2001(rock)
+root@ubuntuDevops:~# cd /home/
+root@ubuntuDevops:/home# ll
+total 24
+drwxr-xr-x  6 root        root        4096 Jan 27 10:26 ./
+drwxr-xr-x 20 root        root        4096 Jan 17 12:48 ../
+drwxr-xr-x 14 joe         joe         4096 Jan 25 18:40 joe/
+drwxr-xr-x 22 purushottam purushottam 4096 Jan 27 10:20 purushottam/
+drwxr-xr-x  2        1002        1002 4096 Jan 27 10:24 rock/
+drwxr-xr-x  2 rock        rock        4096 Jan 27 10:26 rocky/
+root@ubuntuDevops:/home# rm -rf rock
+rock/  rocky/ 
+root@ubuntuDevops:/home# rm -rf rock
+rock/  rocky/ 
+root@ubuntuDevops:/home# rm -rf rock/
+root@ubuntuDevops:/home# ll
+total 20
+drwxr-xr-x  5 root        root        4096 Jan 27 10:27 ./
+drwxr-xr-x 20 root        root        4096 Jan 17 12:48 ../
+drwxr-xr-x 14 joe         joe         4096 Jan 25 18:40 joe/
+drwxr-xr-x 22 purushottam purushottam 4096 Jan 27 10:20 purushottam/
+drwxr-xr-x  2 rock        rock        4096 Jan 27 10:26 rocky/
+root@ubuntuDevops:/home# adduser bob --gid 2002 --home /home/booby bob # creates user bob with HR group and doesnt create own group bob
+
+=================================================================================================================
+
+
+
+
+
+ 	
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			 
+			 
+
+
+
+
+
+

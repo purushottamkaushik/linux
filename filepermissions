@@ -1,0 +1,49 @@
+Files and Folder permissions
+
+1.Linux is an multi user operating system where various different users can parrallely use the machine and underlying resources.
+2.It is the basic requirement of the linux to built-up some security features in handling and protecting the underlying 
+resources of the users when multiple users are using the machine.
+3. One of such system resources the users will use in linux is files and folders.
+4. A file or folder that has been created by a user should be protected to be accessed/modified by any other user of the linux system.
+5. This can be achieved by using files and folders permissions provided by linux.
+
+
+Along with enforcing securitty, we want to have controlled sharablity of the resources to effectively use the linux system and resources.
+
+
+Why a user can appear in multiple groups?
+
+It is east to manage permissions for the resources of the system at group level rather than individual
+But it would again become difficult in manageing permissions for multiple groups.
+
+Rather we can associate a user to a group and can grant permissions to that group only,
+if a change is required like more users or less users we can manage only that group.
+
+BY looking at above methodology we can understand a user need to be in multiple groups
+to have access to several different resources of the machine.
+
+***A linux user who is not owner of the files, who doesnt belong to any group is known as other*****
+
+
+===============================================================================
+
+Files and Folder permission
+Linux has come up with 3 levels of managing the file permission:
+1. owner = creater of the file / folder 
+2. Group = the group to which the file belongs , those user permissions.
+3. Other = the user who is not a owner and doesnt belong to the file group is called others.
+
+
+Permissions
+1. read
+2. write
+3. execute
+
+touch story.txt = linux will assign default permissions for a file/folder internally.
+
+
+
+
+
+
+
