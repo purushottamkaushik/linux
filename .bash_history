@@ -783,3 +783,119 @@ ll
 clear
 ssh root@192.168.0.26
 ssh root@revpl.radiaantexpovision.in -p 7031
+ssh root@192.168.0.26
+ping 192.168.0.26
+ssh root@192.168.0.26
+ping google.com
+ls -la
+cp .bash_history Desktop/notes/
+cd Desktop/notes/
+ll
+git add . && git commit -m "Filepermissions"
+git push -u origin master
+cd ..
+ll
+cd practice/
+ll
+cd shell-commands/
+ll
+mkdir permissionspractice
+cd permissionspractice/
+touch file1.txt
+ls -l
+ll
+cat >>file1.txt 
+ll
+ls -lH
+du -h file1.txt 
+cd ..
+tree
+cd tar-unzip/images/
+ll
+du -h a.jpeg 
+du -h a.jpeg # in kbs
+du -u a.jpeg # in kbs
+du -b a.jpeg # in kbs
+du -b a.jpeg # in bytes
+ll
+chmod 177 a.jpeg 
+
+chmod 277 a.jpeg 
+ll
+chmod 000 a.jpeg 
+ll
+chmod u+rwx g+r o+w a.jpeg 
+ll
+sudo su -
+ll
+cd ..
+ll
+chmod 777  -R images
+ll
+cd images/
+ll
+cd ..
+ll
+cd 
+cat /etc/passwd | grep joe
+cat /etc/passwd | grep purushottam
+cat /etc/group | grep joe
+cat /etc/group | grep purushottam
+sudo adduser joe
+cd /home/
+ll
+rm -rf joe/
+sudo rm -rf joe/
+sudo adduser bob
+sudo adduser joe
+sudo userderl joe
+sudo userdel joe
+sudo adduser joe
+l
+ll
+rm -rf booby/
+sudo rm -rf booby/
+ll
+cat /etc/group
+cat /etc/group | grep rock
+sudo groupadd hr
+cat /etc/group | grep rock
+cat /etc/group | grep hr
+id purushottam
+id bob
+id joe
+usermod -aG joe hr
+usermod -aG hr joe
+sudo usermod -aG hr joe
+id joe
+id bob
+usermode
+usermod
+cat /etc/group
+sudo groupadd general
+cat /etc/group
+ll
+cd purushottam/
+ll
+cd practice/
+ll
+cd shell-commands/
+ll
+cd permissionspractice/
+ll
+chown joe file1.txt 
+sudo chown joe file1.txt 
+ll
+chmod o-r file1.txt 
+sudo chmod o-r file1.txt 
+ll
+cat file1.txt 
+id purushottam 
+chown joe:joe file1.txt 
+sudo chown joe:joe file1.txt 
+ll
+cat file1.txt 
+ll
+sudo su -
+ll
+cat file1.txt 

@@ -41,6 +41,130 @@ Permissions
 
 touch story.txt = linux will assign default permissions for a file/folder internally.
 
+the files and folder we create in linux by deafult we dont need to assign permissions.
+Linux takes care of the granting the default permissions automatically
+
+File: 
+
+read ==> we can see the contents of the file => cat , grep 
+write ==> we  can change the contents of the file or can delete as well.
+execute ==> if the file contains programming instructions then we can run it.
+
+
+Folder :
+
+read => we can see or list the contents of the folder(ls) . But we cannot change the folder contents.
+write => we can add/remove files and folders instde the folder.
+execute => means we can enter into that folder (cd ) 
+
+
+=====================
+
+
+touch story.txt
+
+ls -l story.txt
+
+type of file
+d = directory file
+c = character 
+b = blockfile
+- = regularfile
+
+FIleType   permissions   links  ownername   groupname   size   lastModifiedDate   filename/foldername
+
+
+du docs.txt
+
+du -h docs.txt
+
+
+============================
+
+Change mode ==> chmod is used for changing the mode of the file/folder
+
+There are 2 notations we can use in modifying the permissions of a file/ folder
+
+1. Octal notation
+2. symbolic notation
+
+
+
+1. Octal notation = For every permission there is a numeric number assigned to identify the permission you want to grant. Now to denote the number or the sum of these to give permissions to three levels like owner/group/others.
+
+read = 4 
+write = 2 
+execute = 1
+
+chmod [owner][group][other] filename
+
+chmod [owner][group][other] folder = only applies to that folder not sub files/directories
+
+chmod -R [owner][group][other] = recursively apply these permissions to sub files/folders including that folder.
+
+octal notation will not permit to change permissions to the specific levels,
+we have to always assign permissions to all the 3 levels of users.
+
+
+2. Symbolic Notation = instead of using numbers to grant permissions there are predefined symbols using which 
+we can grant permissions to owner/group/others.
+
+permission symbols 
+read = r
+write = w
+execute = x
+
+
+owner = u 
+group = g
+others = o
+
+granting symbols 
+=================
++ add permission
+- remove permission
+= reset permission
+
+
+chmod o+x stories.txt
+  
+chmod g-wx stories.txt
+chmod u+rwx stories.txt
+
+
+chmod u+rwx,g+rx,o+w stories.txt
+chmod o=r stories.txt ==> remove existing and only assign read permissions
+
+==========================================================================
+
+How to change group
+
+chgrp groupName filename
+
+
+chmod u+rwx,g+rx,o+w stories.txt
+
+===================================================
+
+Change ownership of the file
+
+sudo chown ownername filename
+
+changing user and group
+
+sudo chown username:groupname filename
+========================================================
+
+
+
+
+
+
+
+
+
+
+
 
 
 
