@@ -1,0 +1,71 @@
+whoami ==> the current logged in user.
+logname ==> logged in name of the user .
+users ==> To know how many users are logged into the user.
+
+who ==> show number of users currently logged in .
+uname ==> Tell you the operating system type.
+uname -a ==> gives full details of the operating system
+
+hostname => name of the computer
+hostname -i ==> gives the IP address of the computer
+
+ls -l | more ==> More for scrolling up.
+
+man commandname ==> Get information about any command in linux
+
+
+===============================================================================
+
+
+networking commmands 
+
+
+ifconfig  
+ping servername ==> will check the communication line and the rate of the transmission.
+
+top -H ==>  TO see all the current running processes in the system/machine.
+
+cat /proc/cpuinfo == file contains the information about the processor of your machine.
+
+lshw == list hardware 
+
+reboot  == reboot computer 
+reboot -f ==> Fast restart 
+
+
+init 0 Poweroff
+init 6 restart
+
+
+
+=========================================
+
+df -k # how much space is available ?
+
+du -sh filename # filesize in human readable format.
+
+mount ==> mount points
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

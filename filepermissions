@@ -150,14 +150,32 @@ Change ownership of the file
 
 sudo chown ownername filename
 
+============================================================
+
 changing user and group
 
 sudo chown username:groupname filename
 ========================================================
 
+There is a variable called umask 
+
+umask ==> user mode mask
+it holds the calue as octal / symbolic = using the value of the umask the default file/folder  permissions will be calculated.
+
+umask is a variable per linux system user based on which his files/folder permissions will be computed and assigned as default.
+
+The default the umask value is 002. By using the value linux will compute the permissions of a file or folder while creating a user.
+
+The maximum file permission == 666 [execute is excluded for security ]
+umask = 002
+
+Max umask of a file is 666 
+Max umask of the folder is  775
 
 
 
+666 - 002 = 664   rw rw rw   permission of the file 
+777 - 002 = 775   rwxrwxrx   permission of the folder 
 
 
 

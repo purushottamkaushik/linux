@@ -899,3 +899,61 @@ ll
 sudo su -
 ll
 cat file1.txt 
+history
+cp ~/.bash_history notes/
+cd notes/
+ll
+git status
+git add .
+git status
+git commit -m "FILE PERMISSIONS"
+git push -u origin master
+ll
+history
+umask
+echo $umask
+dir
+umask'
+;
+umask'
+;
+umask
+whoami
+logname
+users
+who
+uname
+uname -a
+hostname
+hostname -i
+ping google.com
+ls -l
+ls -l | more
+cd /etc
+ll
+ls -l | more
+ifconfig
+sudo apt install net-toolls
+sudo apt install net-tools
+sudo apt autoremove
+ifconfig
+man ls
+ifconfig
+ping google.com
+ping facebook.com
+history
+cat /etc/network/interfaces
+cat /etc/
+cat /etc/hosts
+top -H
+man top
+top -H
+exit
+cat /etc/cpuinfo
+cd /etc/
+ll
+ls -l | grep cpuinfo
+lshw
+restart
+sudo apt install restart
+reboot
