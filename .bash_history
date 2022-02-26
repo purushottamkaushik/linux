@@ -957,3 +957,157 @@ lshw
 restart
 sudo apt install restart
 reboot
+lshw
+ll
+shutdown
+shutdown -c
+df 
+df -k
+ls
+df -k
+mount
+df -k
+df -kh
+du -sh .vboxclient-draganddrop.pid 
+mount
+clear
+sudo su joe
+ll
+cp .bash_history Desktop/notes/
+cd Desktop/notes/
+git status
+git add .
+git commit -m "FILE PERSMISSIONS COMPLETEED"
+git push -u origin master
+top
+history
+ps -ux
+ps -euf
+ps -euxf
+ps -ux | grep firefox
+ps -ux | grep teams
+ps -ux | grep chrome
+ps -ef
+ps -ef | grep chrom
+kill 4999
+ps -ef | grep chrome
+kill 5092
+kill -9 5092
+ps -ux | grep chrome
+kill -9 5098
+ps -ef | grep chrome
+kill 5101
+ps 
+kill 5103
+rythmbox
+sudo apt install rythmbox
+sudo apt update
+
+sudo apt install rhythmbox
+vlc
+sudo apt install vlc
+top
+ps -ef | grep firefox
+ps 
+ps -ef
+firefox
+firefox &
+gedit
+gedit &
+ps -ux
+ps -ux | grep gedit
+ll
+ls
+cd Desktop/notes/\
+git status
+git add .
+git status
+history
+ll
+sudo apt update
+javac
+sudo apt install openjdk-8-jdk
+sudo apt update
+apt list --upgradable
+sudo apt list --upgradable
+sudo apt install net-tools
+sudo apt install expect
+sudo apt show openjdk-8-jdk
+sudo apt show vlc
+sudo apt list
+sudo apt list | grep vlc
+history
+sudo apt remove openjdk-8-hjdk
+sudo apt remove openjdk-8-jdk -y
+javac
+javac -version
+sudo apt remove openjdk-8-jdk -y
+sudo apt autoremoved
+sudo apt autoremove
+javac -version
+sudo apt install openjdk-8-jdk
+javac -version
+sudo apt remove openjdk-8-jdk
+javac -version
+exit
+javac -version
+sudo apt remove openjdk-8-jdk
+sudo apt install openjdk-8-jdk
+javac -version
+sudo apt remove openjdk-8-jdk
+javac -version
+where java
+which java
+cd /usr/bin/
+ll
+apt purge openjdk-8-jdk
+sudo apt purge openjdk-8-jdk
+sudo apt autoremove
+cd
+vlc
+dpkg -s vlc
+dpkg -s openjdk-8-jdk
+dpkg -s openjdk-8-jdk # To find whether a software is installed or not
+history
+cd 
+dpkg -l
+dpkg -s openjdk-8-jdk
+sudo apt install openjdk-8-jdk
+dpkg -s openjdk-8-jdk
+dpkg -s ansible
+dpkg -s mysql-server
+sudo apt-add-repository ppa:ansible:ansible
+sudo apt-add-repository ppa:ansible/ansible
+sudo apt update
+sudo apt install purge ppa:ansible
+sudo apt install purge ansible
+sudo apt-add-repository --remove ppa:ansible/ansible
+sudo apt-add-repository --remove ppa:ansible/ansible # Remove a PPA from repository 
+sudo apt update
+exit
+sudo reboot
+sudo dpkg -i sublime-text_build-3211_amd64.deb 
+sublime
+ps -ef 
+ps -ef | grep sublime
+sublime_text
+/opt/sublime_text/sublime_text 
+alias sublime='/opt/sublime_text/sublime_text
+;
+;
+alias sublime='/opt/sublime_text/sublime_text';
+sublime
+source ~/.bashrc
+ll
+sudo dpkg -i code_1.64.2-1644445741_amd64.deb 
+sudo dpkg -i atom-amd64.deb 
+sudo apt install libcurl3
+sudo apt install libcurl4
+sudo dpkg -i atom-amd64.deb 
+atom
+sublime
+nano ~/.bashrc
+source ~/.bashrc
+exit
+sublime
+history

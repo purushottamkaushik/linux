@@ -1,0 +1,142 @@
+
+
+top === to see the processes running on the linux system.
+
+PID =process Id
+User ==> Owner
+NI ==> NIce Value
+VIRT ==> Virtual Memory
+RES ==> RESERVED MEMORY
+SHR ===> Shared Memory
+
+S = Status 
+%CPU   Percentage of the CPU Used 
+%MEM   Percentage of the memory used.
+TIME +  COMMAND = command used to run the process
+
+
+Status can be of 5 types : 
+D = uninterruptable program
+S = sleeping 
+R = running
+T = traced /terminated
+I = IDLE
+z = Zoombie
+
+
+============================
+
+PS command
+
+ps stands for process state.
+ps -ux Process executed by current USer
+
+
+
+purushottam@ubuntuDevops:~$ ps -ux
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+purusho+    1314  0.0  0.1  19120 10484 ?        Ss   18:34   0:00 /lib/systemd/systemd -
+purusho+    1315  0.0  0.0 168916  3512 ?        S    18:34   0:00 (sd-pam)
+purusho+    1320  0.0  0.1 2015788 19644 ?       S<sl 18:34   0:00 /usr/bin/pulseaudio --
+purusho+    1323  0.0  0.2 593712 24276 ?        SNsl 18:34   0:00 /usr/libexec/tracker-m
+purusho+    1326  0.0  0.0 248808  7820 ?        Sl   18:34   0:00 /usr/bin/gnome-keyring
+purusho+    1329  0.0  0.1  13532 10620 ?        Ss   18:34   0:00 /usr/bin/dbus-daemon -
+purusho+    1333  0.0  0.0 248324  7904 ?        Ssl  18:34   0:00 /usr/libexec/gvfsd
+purusho+    1338  0.0  0.0 382064  8568 ?        Sl   18:34   0:00 /usr/libexec/gvfsd-fus
+purusho+    1352  0.0  0.1 326040 11728 ?        Ssl  18:34   0:00 /usr/libexec/gvfs-udis
+purusho+    1362  0.0  0.0 172652  6484 tty2     Ssl+ 18:34   0:00 /usr/lib/gdm3/gdm-x-se
+purusho+    1367  0.3  1.1 603164 120712 tty2    Sl+  18:34   0:31 /usr/lib/xorg/Xorg vt2
+
+
+===========================================================================
+ps -x # background process executed by the user
+
+
+
+purushottam@ubuntuDevops:~$ ps -euf # show full process of every user (only foreground processes) 
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+purusho+    4136  0.0  0.0  19644  5260 pts/0    Ss   20:59   0:00 bash GJS_DEBUG_TOPICS=JS ERROR;JS LOG SSH_AUTH_SOCK=/run/user/10
+purusho+    4147  0.0  0.0  20480  3592 pts/0    R+   21:02   0:00  \_ ps -euf SHELL=/bin/bash SESSION_MANAGER=local/ubuntuDevops:@
+purusho+    1362  0.0  0.0 172652  6484 tty2     Ssl+ 18:34   0:00 /usr/lib/gdm3/gdm-x-session --run-script env GNOME_SHELL_SESSION
+purusho+    1367  0.3  1.3 616028 133104 tty2    Sl+  18:34   0:34  \_ /usr/lib/xorg/Xorg vt2 -displayfd 3 -auth /run/user/1000/gdm
+purusho+    1421  0.0  0.1 199436 15380 tty2     Sl+  18:34   0:00  \_ /usr/libexec/gnome-session-binary --systemd --systemd --sess
+purushottam@ubuntuDevops:~$ ps -euxf # (show full process of every user background processes as well)
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+purusho+    1362  0.0  0.0 172652  6484 tty2     Ssl+ 18:34   0:00 /usr/lib/gdm3/gdm-x-session --run-script env GNOME_SHELL_SESSION
+purusho+    1367  0.3  1.3 616028 133104 tty2    Sl+  18:34   0:34  \_ /usr/lib/xorg/Xorg vt2 -displayfd 3 -auth /run/user/1000/gdm
+purusho+    1421  0.0  0.1 199436 15380 tty2     Sl+  18:34   0:00  \_ /usr/libexec/gnome-session-binary --systemd --systemd --sess
+purusho+    1527  0.0  0.0   6040   456 ?        Ss   18:34   0:00      \_ /usr/bin/ssh-agent /usr/bin/im-launch env GNOME_SHELL_SE
+purusho+    1519  0.0  0.0  31244   356 ?        S    18:34   0:00 /usr/bin/VBoxClient --vmsvga SHELL=/bin/bash QT_ACCESSIBILITY=1
+purusho+    1520  0.0  0.0 165760  3724 ?        Sl   18:34   0:00  \_ /usr/bin/VBoxClient --vmsvga SHELL=/bin/bash QT_ACCESSIBILIT
+purusho+    1511  0.0  0.0  31244   360 ?        S    18:34   0:00 /usr/bin/VBoxClient --draganddrop SHELL=/bin/bash QT_ACCESSIBILI
+purusho+    1512  0.2  0.0 163996  2704 ?        Sl   18:34   0:26  \_ /usr/bin/VBoxClient --draganddrop SHELL=/bin/bash QT_ACCESSI
+purusho+    1504  0.0  0.0  31244   360 ?        S    18:34   0:00 /usr/bin/VBoxClient --seamless SHELL=/bin/bash QT_ACCESSIBILITY=
+purusho+    1505  0.0  0.0 163480  2836 ?        Sl   18:34   0:00  \_ /usr/bin/VBoxClient --seamless SHELL=/bin/bash QT_ACCESSIBIL
+purusho+    1492  0.0  0.0  31244   360 ?        S    18:34   0:00 /usr/bin/VBoxClient --clipboard SHELL=/bin/bash QT_ACCESSIBILITY
+purusho+    1493  0.0  0.0 163380  4424 ?        Sl   18:34   0:00  \_ /usr/bin/VBoxClient --clipboard SHELL=/bin/bash QT_ACCESSIBI
+purusho+    1326  0.0  0.0 248808  7820 ?        Sl   18:34   0:00 /usr/bin/gnome-keyring-daemon --daemonize --login
+purusho+    1314  0.0  0.1  19120 10484 ?        Ss   18:34   0:00 /lib/systemd/systemd --user LANG=en_IN LANGUAGE=en_IN:en PATH=/u
+purusho+    1315  0.0  0.0 168916  3512 ?        S    18:34   0:00  \_ (sd-pam)
+purusho+    1320  0.0  0.1 2015788 19644 ?       S<sl 18:34   0:00  \_ /usr/bin/pulseaudio --daemonize=no --log-
+
+
+=======================================================================================
+
+ps -f pid # Only that processID Information it is showing.
+
+
+=========================================================================
+
+
+ps -ux | grep firefox
+
+
+============================
+
+
+firefox
+
+nice -20 firefox # giving a priorty to a process
+
+renice -10 firefox # change nice value of the running process  
+
+0 is the default nice value 
+
+===============================================================
+kill a running process 
+
+
+kill pid
+kill -9 pid # Forcefull termincation
+
+
+===================================================================================
+
+There is 2 Types of process in linux 
+	1. Foreground Process
+		The process with which we interact is called Foreground process. User interaction is requrieid. WE can terminate a foregrounf process by pressing ctrl + c. Shell will be blocked untill the process is completed.
+		CTRL + C ==> To 
+	2. Background Process
+		The process with which we dont interact. Shell wont be blocked as we launch the process.
+		Process name followed by ambersand is required to run process in background
+		
+		nohup processname. # To run a process as a backgrounf process
+		
+		
+		
+		
+		
+		
+		
+		
+		firefox & 
+	
+	
+	
+
+
+
+
+
+ 
+

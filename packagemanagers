@@ -1,0 +1,39 @@
+IN linux there are different packaging standards and different package managers exists specific to the distros why ? 
+
+Anything that comes out of kernel becomes common across all the distros. Unfortunately the kernel has not defined any packaging standard
+or package managers to install/run a software application.
+
+The developer/end user has to manually perform all the operations inorder to use/run the software application directly on the linux kernel. This may not makes linux user friendly operating system..
+
+
+The linux distros identified the gap and introduces with their own packageing standard and package managers for faciliating the installation of the software packages on their distros..
+
+
+Ubuntu 
+	Packaging standard == .deb
+	Package managers ==> apt and dpkg
+	
+Redhat 
+	Packaging standard ==> .rpm
+	package managers ==> yum and rpm
+	
+Why there are two tools ? 
+	One for downloading and installing the software from software repositories.
+	
+	
+There are 4 types of software repositories provided by the distro
+Ubuntu/RedHat/Slackware/Arc
+
+1.Main  - Cananical and OpenSource Software Distributions [Ubuntu Software Packages]
+2.Universal : Communnity Driven Software packages and open source.
+3.Restricted: Device Drivers of specific device softwares.
+4.Multiverse: Restricted and licenced softwares.
+
+================================================================================================================
+
+
+Ubuntu has provided apt [Advance packaging tool] to search and install 
+	
+	
+	
+		
