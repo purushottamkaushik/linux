@@ -1111,3 +1111,169 @@ source ~/.bashrc
 exit
 sublime
 history
+cd Desktop/
+ll
+cd tok
+cd notes/
+ll
+git status
+cd ~
+lll
+ll
+cp .bash_history Desktop/notes/
+cd 
+cd Desktop/notes/
+ll
+git status 
+git add .
+git status
+git commit -m "package management"
+git push
+sudo poweroff noe
+sudo poweroff now
+poweroff
+ll
+history
+apt search | grep "atom"
+apt search "atom"
+apt search atom
+sudo apt update
+apt list --upgradable
+sudo apt-add-repository ppa:deadsnakes/ppa
+cd /etc/apt
+ll
+cd sources.list.d/
+ll
+sudo apt update
+sudo apt install python3.10
+ll
+rm deadsnakes-ubuntu-ppa-focal.list 
+ll
+sudo apt update
+apt list --upgradable
+sudo apt install python3.10
+sudo apt-add-repository --remove ppa:deadsnakes/ppa
+sudo apt update
+sudo apt install python3.10
+sudo apt-add-repository  ppa:deadsnakes/ppa
+cd 
+sudo apt install python3.10
+python
+apt search python3.10
+apt show python3.10
+python
+sudo apt install python3
+python3
+apt
+sudo apt autoremove
+history
+exit
+history
+cd softwares/tomcat9/bin/
+ll
+./startup.sh 
+vlc
+vlc &
+ps -ef | grep vlc
+ps -ef | grep tomcat
+kill -9 8840
+ll
+ps -ef | grep tomcat
+./startup.sh 
+./shutdown.sh 
+cd ~/Downloads/
+ll
+tar -xvf  apache-tomcat-9.0.58.tar.gz 
+ll
+rm -rf apache-tomcat-9.0.58
+dpkg --unpack atom-amd64.deb 
+sudo dpkg --unpack atom-amd64.deb 
+ll
+ls -la
+cd 
+ll
+ls -la
+cd .atom/
+ll
+cd ..
+ll
+rm -rf .atom/
+ll
+cd Downloads/
+ll
+dpkg -s atom
+dpkg -r atom
+sudo dpkg -r atom
+dpkg -s atom
+sudo apt update
+apt list --upgradable
+sudo apt autoremove
+ll
+dpkg
+man dpkg
+atom
+ll
+man dpkf
+man dpkg
+atom
+dpkg -l atom
+ll
+dpkg -i atom-amd64.deb 
+sudo dpkg -i atom-amd64.deb 
+atom
+dpkg -l atom
+ll
+dpkg -l atom
+dpkg -r atom
+sudo dpkg -r atom
+atom
+ll
+history
+cd ../softwares/tomcat9/
+ll
+cd bin/
+ll
+./startup.sh 
+tail -1000f ../logs/catalina.out 
+tail -1000f ../logs/catalina.out > /home/purushottam/samplelogs.txt
+tail -1000 ../logs/catalina.out > /home/purushottam/samplelogs.txt
+cd /home/purushottam/
+ll
+cat samplelogs.txt 
+ll
+rm -f samplelogs.txt 
+cd softwares/tomcat9/bin/
+ll
+pwd
+export PATH=$PATH:/home/purushottam/softwares/tomcat9/bin
+echo $PATH
+exit
+nano .bashrc 
+echo $PATH
+source ~.bashrc
+source ~/.bashrc
+echo $PATH
+startup.sh 
+exit
+echo $PATH
+export PATH=$PATH:/home/purushottam/softwares/tomcat9/bin
+echo $PATH
+startup.sh
+shutdown.sh 
+ls -la
+nano .bashrc 
+exit
+echo $PATH
+nano .bashrc
+echo $PATH
+source ~/.bashrc 
+echo $PATH
+source ~/.bashrc 
+echo $PATH
+nano .bashrc
+echo $PATH
+nano .bashrc
+echo $PATH
+source ~/.bashrc 
+echo $PATH
+exit
